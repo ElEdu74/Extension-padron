@@ -1,0 +1,61 @@
+#cuit-detector-button,
+.cuit-detector-button {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  opacity: 0 !important;
+  transform: translateY(10px) scale(0.8) !important;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  user-select: none !important;
+  pointer-events: auto !important;
+  white-space: nowrap !important;
+  backdrop-filter: blur(10px) !important;
+  min-width: 70px !important;
+  text-align: center !important;
+}
+
+#cuit-detector-button.show,
+.cuit-detector-button.show {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+#cuit-detector-button:hover,
+.cuit-detector-button:hover {
+  background: linear-gradient(135deg, #45a049, #3d8b40) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+#cuit-detector-button:active,
+.cuit-detector-button:active {
+  transform: translateY(0) scale(0.95) !important;
+  transition: all 0.1s ease !important;
+}
+
+/* Asegurar que el botón no interfiera con otros elementos */
+#cuit-detector-button * {
+  pointer-events: none;
+}
+
+/* Mejorar visibilidad en diferentes fondos */
+#cuit-detector-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  z-index: -1;
+}
